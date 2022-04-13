@@ -8,6 +8,13 @@
 
 int main()
 {
+	// FIFO file path
+    char * myfifo = "myfifo";
+
+    // Creating the named file(FIFO)
+    // mkfifo(<pathname>, <permission>)
+    mkfifo(myfifo, 0666);
+
     int fd;   
     char arr1[80], arr2[80];
     char arr3[80],arr4[80];
